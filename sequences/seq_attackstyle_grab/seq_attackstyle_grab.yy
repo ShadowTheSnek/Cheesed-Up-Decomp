@@ -1,0 +1,55 @@
+{
+  "resourceType": "GMSequence",
+  "resourceVersion": "1.4",
+  "name": "seq_attackstyle_grab",
+  "autoRecord": true,
+  "backdropHeight": 768,
+  "backdropImageOpacity": 0.5,
+  "backdropImagePath": "",
+  "backdropWidth": 1366,
+  "backdropXOffset": 0.0,
+  "backdropYOffset": 0.0,
+  "events": {
+    "resourceType": "KeyframeStore<MessageEventKeyframe>",
+    "resourceVersion": "1.0",
+    "Keyframes": [],
+  },
+  "eventStubScript": {
+    "name": "scr_sequence_events",
+    "path": "scripts/scr_sequence_events/scr_sequence_events.yy",
+  },
+  "eventToFunction": {},
+  "length": 190.0,
+  "lockOrigin": false,
+  "moments": {
+    "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+    "resourceVersion": "1.0",
+    "Keyframes": [
+      {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
+              "seq_grab_sound",
+            ],},},"Disabled":false,"id":"951cf1a0-7d49-413c-95ad-d39796160aea","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
+      {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
+              "seq_grab_stop",
+            ],},},"Disabled":false,"id":"b69071cf-d1d1-430f-8e4e-615dceba07a9","IsCreationKey":false,"Key":48.0,"Length":1.0,"Stretch":false,},
+      {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
+              "seq_killingblow_sound",
+            ],},},"Disabled":false,"id":"28ccd548-b3dd-4d24-9768-8596297ef6d1","IsCreationKey":false,"Key":86.0,"Length":1.0,"Stretch":false,},
+    ],
+  },
+  "parent": {
+    "name": "Sequences",
+    "path": "folders/Sequences.yy",
+  },
+  "playback": 1,
+  "playbackSpeed": 60.0,
+  "playbackSpeedType": 0,
+  "showBackdrop": true,
+  "showBackdropImage": false,
+  "spriteId": null,
+  "timeUnits": 1,
+  "tracks": [],
+  "visibleRange": null,
+  "volume": 1.0,
+  "xorigin": -192,
+  "yorigin": -108,
+}
