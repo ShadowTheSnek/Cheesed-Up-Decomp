@@ -1,0 +1,1 @@
+cooldownrandom = 1
