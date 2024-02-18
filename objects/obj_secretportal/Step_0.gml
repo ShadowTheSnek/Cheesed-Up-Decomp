@@ -1,0 +1,124 @@
+if ((sprite_index == spr_close || sprite_index == spr_secretportal_close) && (!touched))
+{
+    image_speed = 0
+    if active
+    {
+        sprite_index = spr_open
+        image_index = 0
+    }
+}
+else
+    image_speed = 0.35
+if (touched && sprite_index == spr_close && ((!death) || instance_exists(obj_deathportalexit)))
+{
+    with (playerid)
+    {
+        hsp = 0
+        vsp = 0
+        x = other.x
+        y = other.y
+        scale_xs = Approach(scale_xs, 0, 0.05)
+        scale_ys = Approach(scale_ys, 0, 0.05)
+        fallinganimation = 0
+        if (state == states.mach2 || state == states.mach3)
+            state = states.normal
+    }
+    with (obj_heatafterimage)
+        visible = false
+}
+if (floor(image_index) >= (image_number - 1))
+{
+    switch sprite_index
+    {
+        case spr_open:
+            sprite_index = spr_idle
+            break
+        case spr_close:
+            image_index = (image_number - 1)
+            if touched
+            {
+                if (targetRoom == room && (!secret))
+                {
+                    targetRoom = choose(entrance_secret3, entrance_secret4, entrance_secret5)
+                    with (gml_Script_instance_create(0, 0, obj_langerror))
+                        text = string("{0}: undefined secret", room_get_name(room))
+                }
+                if death
+                {
+                    with (obj_camera)
+                    {
+                        lock = 0
+                        limitcam = [camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])), (camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0]))]
+                        panspeed = 40
+                    }
+                    with (obj_deathportalexit)
+                    {
+                        visible = true
+                        active = 1
+                        image_index = 0
+                    }
+                    instance_destroy()
+                }
+                else if (!instance_exists(obj_fadeout))
+                {
+                    with (obj_player)
+                    {
+                        lastTargetDoor = targetDoor
+                        targetDoor = "S"
+                        if other.soundtest
+                        {
+                            lastroom_soundtest = room
+                            lastroom_secretportalID = other.id
+                        }
+                        if (!other.secret)
+                        {
+                            set_lastroom()
+                            targetRoom = other.targetRoom
+                            secretportalID = other.ID
+                        }
+                        else
+                        {
+                            var condition = other.targetRoom != room
+                            if instance_exists(obj_cyop_loader)
+                                condition = 0
+                            if (condition && (!instance_exists(obj_randomsecret)))
+                            {
+                                targetRoom = other.targetRoom
+                                set_lastroom()
+                            }
+                            else
+                            {
+                                targetRoom = lastroom
+                                if (room == tower_soundtest || room == tower_soundtestlevel)
+                                {
+                                    targetRoom = lastroom_soundtest
+                                    secretportalID = lastroom_secretportalID
+                                }
+                            }
+                        }
+                        if (instance_exists(obj_randomsecret) && (!obj_randomsecret.selected))
+                        {
+                            secretportalID = -4
+                            obj_randomsecret.selected = 1
+                            var len = array_length(obj_randomsecret.levels)
+                            if (len > 0)
+                            {
+                                var num = irandom((len - 1))
+                                if global.MOD.Ordered
+                                    num = 0
+                                targetRoom = obj_randomsecret.levels[num]
+                                array_delete(obj_randomsecret.levels, num, 1)
+                            }
+                            else
+                                targetRoom = secret_entrance
+                        }
+                    }
+                    if ((!secret) && (!soundtest) && (!instance_exists(obj_randomsecret)))
+                        add_saveroom()
+                    gml_Script_instance_create(x, y, obj_fadeout)
+                }
+            }
+            break
+    }
+
+}

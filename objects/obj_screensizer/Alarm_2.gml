@@ -1,0 +1,1 @@
+gml_Script_screen_apply_size()

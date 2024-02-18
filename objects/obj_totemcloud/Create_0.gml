@@ -1,0 +1,9 @@
+trigger = 1
+active = 0
+shot = 0
+do_sound = 1
+sprite_index = spr_totemcloud_end
+image_index = (image_number - 1)
+image_speed = 0
+depth = -5
+snd = fmod_event_create_instance("event:/sfx/misc/thundercloud")

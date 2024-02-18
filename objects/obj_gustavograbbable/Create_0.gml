@@ -1,0 +1,58 @@
+event_inherited()
+stompable = 0
+killbyenemy = 0
+groundpound = 0
+instantkillable = 0
+stunnable = 0
+parryable = 0
+hittable = 0
+shakestun = 0
+supertauntable = 0
+usepalette = 1
+grav = 0.5
+hsp = 0
+vsp = 0
+state = states.walk
+stunned = 0
+alarm[0] = 150
+roaming = 1
+collectdrop = 5
+flying = 0
+straightthrow = 0
+cigar = 0
+cigarcreate = 0
+stomped = 0
+shot = 0
+reset = 0
+flash = 0
+with (obj_player1)
+{
+    other.landspr = spr_lonegustavoidle
+    other.idlespr = spr_lonegustavograbbable
+    other.fallspr = spr_lonegustavojump
+    other.stunfallspr = spr_lonegustavostun
+    other.walkspr = spr_lonegustavowalk
+    other.turnspr = spr_lonegustavoidle
+    other.recoveryspr = spr_lonegustavoidle
+    other.grabbedspr = spr_lonegustavograbbable
+    other.scaredspr = spr_lonegustavograbbable
+    other.ragespr = spr_lonegustavograbbable
+    other.spr_dead = spr_lonegustavohurt
+}
+image_xscale = -1
+hp = 1
+slapped = 0
+grounded = 1
+birdcreated = 0
+boundbox = 0
+important = 1
+heavy = 0
+depth = 0
+paletteselect = gustavo_palette(obj_player1.paletteselect)
+spr_palette = spr_peppalette
+sprite_index = spr_slimemove
+grabbedby = 0
+stuntouchbuffer = 0
+scaredbuffer = 0
+snotty = 0
+sound_play_3d("event:/sfx/pep/jump", x, y)

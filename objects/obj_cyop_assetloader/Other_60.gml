@@ -1,0 +1,5 @@
+var spr = ds_map_find_value(async_load, "id")
+sprite_set_speed(spr, 1, 1)
+var pos = ds_list_find_index(to_load, spr)
+ds_list_delete(to_load, pos)
+trace(string("Done sprite: {0} Pos: {1}", spr, pos))

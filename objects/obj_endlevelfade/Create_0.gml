@@ -1,0 +1,9 @@
+fadealpha = 0
+fadein = 0
+do_rank = 1
+toppinvisible = 1
+depth = -600
+sugary = check_sugary()
+scroll = 0
+rank = 0
+rankwait = 1

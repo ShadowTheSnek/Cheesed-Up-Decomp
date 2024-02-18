@@ -1,0 +1,11 @@
+queue = ds_queue_create()
+image_speed = 0
+target_object = obj_player1
+curr_state = -4
+grace_period = 0
+surf = -1
+color1 = shader_get_uniform(shd_mach3effect, "color1")
+color2 = shader_get_uniform(shd_mach3effect, "color2")
+layer_4_index = 0
+layer_offsets = [0, 0, 0, 0, 0, 0]
+distance = 50

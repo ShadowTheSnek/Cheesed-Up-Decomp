@@ -1,0 +1,12 @@
+depth = (obj_drawcontroller.depth + 1)
+image_speed = 0.35
+handle = -4
+username = "Player"
+current_room = -4
+paletteselect = 0
+pattern = -4
+panic = 0
+fill = 0
+state = states.normal
+spr_palette = spr_peppalette
+busy = 0

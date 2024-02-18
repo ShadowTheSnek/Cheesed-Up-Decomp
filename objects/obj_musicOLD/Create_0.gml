@@ -1,0 +1,16 @@
+pausedmusic = 0
+fadeoff = 0
+global.music = 0
+roomname = obj_null
+arena = 0
+global.mu = -4
+music = -4
+secretmusic = -4
+musicID = -4
+secretmusicID = -4
+pillarmusicID = -4
+secret = 0
+secretend = 0
+pillar_on_camera = 0
+prevpillar_on_camera = 0
+room_arr = [[538, "event:/music/title", "event:/music/w1/medievalsecret", 0], [24, "event:/music/w1/entrance", "event:/music/w1/medievalsecret", 0], [71, "event:/music/w1/dungeon", "event:/music/w1/dungeonsecret", 0], [84, "event:/music/w1/dungeon", "event:/music/w1/dungeonsecret", 1], [86, "event:/music/w1/dungeondepth", "event:/music/w1/dungeonsecret", 1], [259, "event:/music/w5/chateau", "event:/music/w1/medievalsecret", 0], [261, mu_strongcold, "event:/music/w1/medievalsecret", 0], [274, "event:/music/w1/dungeondepth", "event:/music/w1/medievalsecret", 0], [39, mu_medievalentrance, "event:/music/w1/medievalsecret", 0], [40, mu_medievalentrance, "event:/music/w1/medievalsecret", 1], [41, mu_medievalremix, "event:/music/w1/medievalsecret", 1], [44, mu_medievalremix, "event:/music/w1/medievalsecret", 1], [46, "event:/music/w1/medieval", "event:/music/w1/medievalsecret", 1], [54, "event:/music/w1/ruin", "event:/music/w1/ruinsecret", 0], [60, "event:/music/w1/ruin", "event:/music/w1/ruinsecret", 1], [62, "event:/music/w1/ruinremix", "event:/music/w1/ruinsecret", 1], [719, "event:/music/w2/desert", "event:/music/w2/desertsecret", 0], [728, "event:/music/w2/desert", "event:/music/w2/desertsecret", 1], [729, "event:/music/w2/ufo", "event:/music/w2/desertsecret", 1], [734, "event:/music/w2/ufo", "event:/music/w2/desertsecret", 1], [731, "event:/music/w2/desert", "event:/music/w2/desertsecret", 1], [194, "event:/music/w3/forest", "event:/music/w1/medievalsecret", 0], [554, "event:/music/w3/forest", "event:/music/w1/medievalsecret", 1], [772, "event:/music/w3/gustavo", "event:/music/w1/medievalsecret", 0], [199, "event:/music/w3/forest", "event:/music/w1/medievalsecret", 1], [244, "event:/music/w5/chateau", "event:/music/w1/medievalsecret", 0], [830, "event:/music/w4/sewer", "event:/music/w1/medievalsecret", 0], [441, "event:/music/w4/freezer", "event:/music/w1/medievalsecret", 0], [596, "event:/music/w5/kidsparty", "event:/music/w1/medievalsecret", 0], [229, mu_minigolf, "event:/music/w1/medievalsecret", 0], [672, "event:/music/w4/industrial", "event:/music/w1/medievalsecret", 0], [559, "event:/music/w4/street", "event:/music/w1/medievalsecret", 0], [138, "event:/music/w2/farm", "event:/music/w2/farmsecret", 0], [241, mu_pinball, mu_pinballsecret, 0], [123, "event:/music/w2/graveyard", "event:/music/w1/medievalsecret", 0], [687, "event:/music/w2/saloon", "event:/music/w2/saloonsecret", 0], [157, "event:/music/w2/ufo", mu_pinballsecret, 0], [706, "event:/music/w3/beach", "event:/music/w1/medievalsecret", 0], [526, "event:/music/w5/war", "event:/music/w1/medievalsecret", 0], [739, "event:/music/finalescape", "event:/music/w1/dungeonsecret", 0], [776, "event:/music/title", "event:/music/w1/dungeonsecret", 0], [757, "event:/music/hub", "event:/music/w1/dungeonsecret", 0], [756, "event:/music/hub", "event:/music/w1/dungeonsecret", 1], [752, "event:/music/hub", "event:/music/w1/dungeonsecret", 1], [748, mu_hub3, "event:/music/w1/dungeonsecret", 1], [744, mu_hub4, "event:/music/w1/dungeonsecret", 1], [740, "event:/music/hub", "event:/music/w1/dungeonsecret", 1]]

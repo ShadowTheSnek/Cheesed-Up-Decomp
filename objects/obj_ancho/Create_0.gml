@@ -1,0 +1,56 @@
+event_inherited()
+grav = 0
+hsp = 0
+vsp = 0
+state = states.walk
+stunned = 0
+alarm[0] = 150
+roaming = 1
+collectdrop = 5
+flying = 0
+straightthrow = 0
+cigar = 0
+cigarcreate = 0
+stomped = 0
+shot = 0
+reset = 0
+hp = 1
+hitboxcreate = 0
+grounded = 0
+idlespr = spr_ancho
+stunfallspr = spr_anchobounce
+walkspr = spr_ancho
+grabbedspr = spr_anchobounce
+scaredspr = spr_ancho_scared
+flash = 0
+slapped = 0
+birdcreated = 0
+boundbox = 0
+spr_dead = spr_anchodead
+important = 0
+heavy = 0
+depth = 0
+grabbedby = 0
+stuntouchbuffer = 0
+spr_palette = spr_ancho_palette
+usepalette = 1
+spr_chargestart = spr_ancho_chargestart
+spr_charge = spr_ancho_charge
+spr_rage1 = spr_ancho_rage1
+spr_rage2 = spr_ancho_rage2
+spr_rage3 = spr_ancho_rage3
+if global.snickrematch
+{
+    idlespr = spr_ancho_re
+    stunfallspr = spr_anchobounce_re
+    walkspr = spr_ancho_re
+    grabbedspr = spr_ancho_grabbed_re
+    scaredspr = spr_anchobounce_re
+    spr_dead = spr_anchodead_re
+    spr_rage1 = spr_ancho_rage1_re
+    spr_rage2 = spr_ancho_rage2_re
+    spr_rage3 = spr_ancho_rage3_re
+    spr_chargestart = spr_ancho_chargestart_re
+    spr_charge = spr_ancho_charge_re
+    sprite_index = walkspr
+}
