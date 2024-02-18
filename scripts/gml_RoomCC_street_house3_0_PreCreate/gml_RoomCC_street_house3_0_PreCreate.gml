@@ -1,0 +1,1 @@
+gusdestroy = 1

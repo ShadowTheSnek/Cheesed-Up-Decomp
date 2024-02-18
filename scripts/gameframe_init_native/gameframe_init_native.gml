@@ -1,0 +1,1 @@
+gml_Script_gameframe_init_raw()

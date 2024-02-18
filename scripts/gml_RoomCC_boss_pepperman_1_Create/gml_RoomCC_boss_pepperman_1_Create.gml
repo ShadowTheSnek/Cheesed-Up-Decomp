@@ -1,0 +1,26 @@
+bossspr = spr_vspepperman
+boss_hp = 20
+vstitle = spr_vstitle_pepperman
+boss_columnmax = 5
+boss_hp_x -= 50
+function anon@127@gml_RoomCC_boss_pepperman_1_Create() //gml_Script_anon@127@gml_RoomCC_boss_pepperman_1_Create
+{
+    var eh = 0
+    var p = 0
+    with (obj_pepperman)
+    {
+        eh = elitehit
+        p = phase
+    }
+    if (p == 1)
+        boss_hp = eh
+    else if (p == 2)
+    {
+        boss_hp = eh
+        if (eh <= 0)
+            boss_hp = 1
+    }
+    else if (p == 0)
+        boss_hp = 0
+}
+
